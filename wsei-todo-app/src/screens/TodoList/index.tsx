@@ -1,38 +1,23 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import { Text, Button, View } from "react-native";
 import styled from "styled-components/native";
 
 import Colors from "../../constans/Colors";
+import Form from "../../components/Form";
 
-const WelcomeText = styled.Text`
-  margin-top: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 20px;
-  color: ${Colors.black};
-`;
-const MidText = styled.Text`
-  margin-top: 30px;
-  margin-right: auto;
-  margin-left: 20px;
-  font-size: 20px;
-  color: ${Colors.black};
-`;
-interface ITodoListProps {}
+import TodoList from "../../components/TodoList";
 
-const TodoList = ({ navigation }) => {
+const TodoListScreen = ({ navigation }) => {
+  const [formView, setFormView] = useState<boolean>(false);
   return (
-    <View>
-      <WelcomeText>TodoList View</WelcomeText>
-      <MidText>Add task:</MidText>
-      <Button
-        title="+"
-        onPress={() => {
-          navigation.navigate("Home");
-        }}
-      />
+    <View style={{ backgroundColor: Colors.darkerWhite }}>
+      {formView ? (
+        <Form switchView={setFormView} />
+      ) : (
+        <TodoList switchView={setFormView} />
+      )}
     </View>
   );
 };
 
-export default TodoList;
+export default TodoListScreen;

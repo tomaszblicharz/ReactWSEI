@@ -28,7 +28,13 @@ const Home: FC<IHomeProps> = (props) => {
   const navigation = useNavigation();
 
   return (
-    <View style={{ backgroundColor: "#52CBE9" }}>
+    <View
+      style={{
+        backgroundColor: Colors.lightBlue,
+        flexDirection: "row",
+        justifyContent: "space-between",
+      }}
+    >
       <ScrollView>
         <CustomImage
           style={{

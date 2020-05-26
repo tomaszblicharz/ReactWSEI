@@ -3,7 +3,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { MaterialCommunityIcons } from "react-native-vector-icons";
 
 import Home from "../screens/Home";
-import TodoList from "../screens/TodoList";
+import TodoListScreen from "../screens/TodoList";
 import Info from "../screens/Info";
 
 const Tab = createBottomTabNavigator();
@@ -14,7 +14,7 @@ const BottomTabs: FC = () => {
     <Tab.Navigator
       initialRouteName="Home"
       tabBarOptions={{
-        activeTintColor: "#e91e63"
+        activeTintColor: "#e91e63",
       }}
     >
       <Tab.Screen
@@ -24,12 +24,12 @@ const BottomTabs: FC = () => {
           tabBarLabel: "Home",
           tabBarIcon: ({ color, size }) => (
             <MaterialCommunityIcons name="home" color="#0000ff" size={size} />
-          )
+          ),
         }}
       />
       <Tab.Screen
         name="TodoList"
-        component={TodoList}
+        component={TodoListScreen}
         options={{
           tabBarLabel: "TodoList",
           tabBarIcon: ({ color, size }) => (
@@ -38,7 +38,7 @@ const BottomTabs: FC = () => {
               color="#ff0000"
               size={size}
             />
-          )
+          ),
         }}
       />
 
@@ -49,7 +49,7 @@ const BottomTabs: FC = () => {
           tabBarLabel: "Info",
           tabBarIcon: ({ color, size }) => (
             <MaterialCommunityIcons name="star" color="#FFD700" size={size} />
-          )
+          ),
         }}
       />
     </Tab.Navigator>

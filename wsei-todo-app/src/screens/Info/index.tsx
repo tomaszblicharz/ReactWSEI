@@ -48,7 +48,7 @@ interface IInfoProps {}
 
 const Info = ({ navigation }) => {
   return (
-    <View style={{ backgroundColor: "#FFCC66" }}>
+    <View style={{ backgroundColor: Colors.orange }}>
       <WelcomeText>About of Coding</WelcomeText>
       <MidText>Jesteśmy na środku</MidText>
 
