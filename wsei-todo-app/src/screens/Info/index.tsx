@@ -16,6 +16,7 @@ const CustomImage1 = styled.Image`
   width: 130px;
   height: 130px;
   margin-top: 20px;
+  border-radius: 40px;
 `;
 const CustomImage2 = styled.Image`
   width: 130px;
@@ -33,6 +34,7 @@ const MidText = styled.Text`
   font-size: 23px;
   margin-left: auto;
   margin-right: auto;
+
   color: ${Colors.black};
 `;
 const LeftText = styled.Text`
@@ -41,14 +43,19 @@ const LeftText = styled.Text`
 `;
 const RightText = styled.Text`
   font-size: 23px;
+  margin-left: auto;
   color: ${Colors.black};
 `;
 
+const Body = styled.View`
+  background-color: ${Colors.background};
+  height: 100%;
+`;
 interface IInfoProps {}
 
 const Info = ({ navigation }) => {
   return (
-    <View style={{ backgroundColor: Colors.orange }}>
+    <Body>
       <WelcomeText>About of Coding</WelcomeText>
       <MidText>Jesteśmy na środku</MidText>
 
@@ -59,7 +66,7 @@ const Info = ({ navigation }) => {
       <RightText>No i do prawa</RightText>
 
       <CustomImage3 source={require("../../assets/break.png")} />
-    </View>
+    </Body>
   );
 };
 

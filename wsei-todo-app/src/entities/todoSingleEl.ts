@@ -1,4 +1,4 @@
 export interface ISingleElList {
-  name: string;
+  title: string;
   description: string;
 }

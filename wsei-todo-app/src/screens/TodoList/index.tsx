@@ -4,19 +4,24 @@ import styled from "styled-components/native";
 
 import Colors from "../../constans/Colors";
 import Form from "../../components/Form";
-
 import TodoList from "../../components/TodoList";
+import { useNavigation } from "@react-navigation/native";
+
+const Body = styled.View`
+  background-color: ${Colors.background};
+  height: 100%;
+`;
 
 const TodoListScreen = ({ navigation }) => {
   const [formView, setFormView] = useState<boolean>(false);
   return (
-    <View style={{ backgroundColor: Colors.darkerWhite }}>
+    <Body>
       {formView ? (
         <Form switchView={setFormView} />
       ) : (
         <TodoList switchView={setFormView} />
       )}
-    </View>
+    </Body>
   );
 };
 
