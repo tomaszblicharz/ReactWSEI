@@ -6,10 +6,11 @@ import { useDispatch } from "react-redux";
 import { setNewElTodoList } from "../actions/todoListActions";
 import { ISingleElList } from "../entities/todoSingleEl";
 import Colors from "./../constans/Colors";
-import { REMOVE_EL } from "../actions/types/todolistTypes";
+
 const Wrapper = styled.View`
   margin: 80px 20px 0 20px;
   color: black;
+  min-height: 670px;
 `;
 
 const CustomTitle = styled.TextInput`
