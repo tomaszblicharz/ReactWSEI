@@ -40,30 +40,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.0.3] - 2020-03-30
 
-### Changes
-
 ### Added
 
     -SplashScreen
 
 ## [1.1.0] - 2020-05-05
 
-### Changes
-
-    -ListModal/index.tsx
-    -RemoveListButton.tsx
-
 ### Added
 
     -Commit/Push Project on GitHub
 
 ## [1.2.0] - 2020-05-22
-
-### Changes
-
-    -ListModal/index.tsx
-
-### Added
 
     -Adding tasks
     -Button Back
@@ -72,4 +59,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changes
 
+    -Refactoring
     -Styling CSS
+
+### Added
+
+     -Adding remove tasks

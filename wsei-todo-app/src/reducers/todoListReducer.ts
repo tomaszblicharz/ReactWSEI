@@ -17,6 +17,12 @@ export default (state = defaultState(), action: any): ITodoListReducer => {
         todoList: [...state.todoList, action.newEl],
       };
     }
+    case actionTypes.REMOVE_EL: {
+      return {
+        ...state,
+        todoList: state.todoList.filter((elem) => elem.id !== action.elemId),
+      };
+    }
     default: {
       return state;
     }
